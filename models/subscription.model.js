@@ -56,12 +56,8 @@ const subscriptionSchema = new Mongoose.Schema({
         ref: 'User',
         required: true,
         index: true
-    },
-    options:{
-        timestamps: true
-    }
-
-});
+    }},
+   { timestamps: true });
 
 //
 //auto calculate a renewal date if required

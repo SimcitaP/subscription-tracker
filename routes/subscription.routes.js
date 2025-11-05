@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import { createSubscription } from '../controllers/subscription.controller.js';
 
 const subscriptionRouter = Router();
 
@@ -12,10 +13,7 @@ subscriptionRouter.get('/:id', (req, res) => {
   res.send(`Get subscription with ID: ${req.params.id}`);
 });
 
-subscriptionRouter.post('/', (req, res) => {
-  // Handle creating a new subscription
-  res.send('Create a new subscription');
-});
+subscriptionRouter.post('/', createSubscription);
 
 subscriptionRouter.put('/:id', (req, res) => {
   // Handle updating a specific subscription by ID
